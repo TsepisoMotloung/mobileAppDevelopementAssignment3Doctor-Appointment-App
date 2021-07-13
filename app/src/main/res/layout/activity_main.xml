@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" 
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    android:background="@drawable/file">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:alpha="0.8"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.526"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/doctor" />
+
+        <Button
+            android:id="@+id/view"
+            android:onClick="view"
+            android:background="@drawable/custom_input"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="View Appointments"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/patient_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Patient Info"
+            android:textColor="@color/white"
+            android:alpha="0.9"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/name"
+            android:layout_width="409dp"
+            android:textColorHint="@color/white"
+            app:hintAnimationEnabled="true"
+            android:alpha="0.9"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/patient_info">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/in_name"
+                android:background="@drawable/custom_input"
+                android:drawableLeft="@drawable/ic_baseline_account_circle_24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Firstname"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:alpha="0.8"
+                android:inputType="textPersonName"
+                tools:text="@tools:sample/first_names[0]" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/surname"
+            android:drawableLeft="@drawable/ic_baseline_account_circle_24"
+            android:layout_width="409dp"
+            android:textColorHint="@color/white"
+            app:hintAnimationEnabled="true"
+            android:alpha="0.9"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/insurname"
+                android:background="@drawable/custom_input"
+                android:drawableLeft="@drawable/ic_baseline_account_circle_24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Lastname"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:alpha="0.8"
+                tools:text="@tools:sample/last_names[0]" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/birthday"
+            android:textColorHint="@color/white"
+            app:hintAnimationEnabled="true"
+            android:alpha="0.9"
+            android:layout_width="409dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/surname">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inbirthday"
+                android:background="@drawable/custom_input"
+                android:drawableLeft="@drawable/ic_baseline_date_range_24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Birth Date"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:alpha="0.8"
+                android:inputType="date"
+                tools:text="@tools:sample/date/ddmmyy" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phone"
+            android:textColorHint="@color/white"
+            app:hintAnimationEnabled="true"
+            android:alpha="0.9"
+            android:layout_width="412dp"
+            android:layout_height="71dp"
+            android:layout_marginTop="4dp"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/birthday">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:background="@drawable/custom_input"
+                android:id="@+id/inphone"
+                android:drawableLeft="@drawable/ic_baseline_phone_24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone number"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:alpha="0.8"
+                android:inputType="phone"
+                tools:text="@tools:sample/us_phones" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:textColor="@color/white"
+            android:alpha="0.9"
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Appointment Info"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phone" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/appdate"
+            android:layout_width="409dp"
+            android:textColorHint="@color/white"
+            app:hintAnimationEnabled="true"
+            android:alpha="0.9"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:background="@drawable/custom_input"
+                android:id="@+id/inappdate"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:alpha="0.8"
+                android:drawableLeft="@drawable/ic_baseline_date_range_24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Appointment Date"
+                android:inputType="date"
+                tools:text="@tools:sample/date/ddmmyy" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/aptime"
+            android:textColorHint="@color/white"
+            app:hintAnimationEnabled="true"
+            android:alpha="0.9"
+            android:layout_width="409dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appdate">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:background="@drawable/custom_input"
+                android:id="@+id/inaptime"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:alpha="0.8"
+                android:drawableLeft="@drawable/ic_baseline_access_time_24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Appointment Time"
+                android:inputType="time"
+                tools:text="@tools:sample/date/hhmm" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/aptime">
+
+            <Button
+                android:id="@+id/clear"
+                android:background="@drawable/custom_input"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="clear"
+                android:padding="5dp"
+                android:layout_marginRight="5dp"
+                android:text="Clear" />
+
+            <Button
+                android:background="@drawable/custom_input"
+                android:id="@+id/save"
+                android:onClick="save"
+                android:layout_marginLeft="5dp"
+                android:padding="5dp"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Save" />
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
